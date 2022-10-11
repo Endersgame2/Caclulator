@@ -162,14 +162,28 @@ namespace Caclulator
                 case "*":
                     Result.Text = (CombinedResult * double.Parse(Result.Text)).ToString();
                     break;
+                case "BIN":
+                    int input = int.Parse(Result.Text);
+                    Result.Text = ConvertToBinary(input);
+                    break;
+                //case "DEC":
+                    //Result.Text = (CombinedResult * double.Parse(Result.Text)).ToString();
+                    //break;
+
 
                 default: break;
             }
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        public string ConvertToBinary(int input)
         {
-
-        }
+            string binaryResult = "";
+            while (input >= 1)
+            {
+                double remainder = input % 2;
+                binaryResult = remainder + binaryResult;
+                input = input / 2;
+            }
+            return binaryResult;
+        }      
     }
 }
