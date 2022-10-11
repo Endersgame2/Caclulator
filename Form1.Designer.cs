@@ -43,11 +43,11 @@
             this.button11 = new System.Windows.Forms.Button();
             this.num9 = new System.Windows.Forms.Button();
             this.dott = new System.Windows.Forms.Button();
-            this.Clear = new System.Windows.Forms.Button();
+            this.Zero = new System.Windows.Forms.Button();
             this.num8 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.Percentage = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
             this.equalToo = new System.Windows.Forms.Button();
             this.Result = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -206,16 +206,16 @@
             this.dott.UseVisualStyleBackColor = true;
             this.dott.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Clear
+            // Zero
             // 
-            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear.Location = new System.Drawing.Point(12, 189);
-            this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(95, 35);
-            this.Clear.TabIndex = 0;
-            this.Clear.Text = "C";
-            this.Clear.UseVisualStyleBackColor = true;
-            this.Clear.Click += new System.EventHandler(this.button1_Click);
+            this.Zero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Zero.Location = new System.Drawing.Point(12, 189);
+            this.Zero.Name = "Zero";
+            this.Zero.Size = new System.Drawing.Size(95, 35);
+            this.Zero.TabIndex = 0;
+            this.Zero.Text = "0";
+            this.Zero.UseVisualStyleBackColor = true;
+            this.Zero.Click += new System.EventHandler(this.button1_Click);
             // 
             // num8
             // 
@@ -250,16 +250,16 @@
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Percentage
+            // Clear
             // 
-            this.Percentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Percentage.Location = new System.Drawing.Point(176, 148);
-            this.Percentage.Name = "Percentage";
-            this.Percentage.Size = new System.Drawing.Size(35, 35);
-            this.Percentage.TabIndex = 0;
-            this.Percentage.Text = "%";
-            this.Percentage.UseVisualStyleBackColor = true;
-            this.Percentage.Click += new System.EventHandler(this.button1_Click);
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.Location = new System.Drawing.Point(176, 148);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(35, 35);
+            this.Clear.TabIndex = 0;
+            this.Clear.Text = "C";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.button1_Click);
             // 
             // equalToo
             // 
@@ -288,14 +288,14 @@
             this.ClientSize = new System.Drawing.Size(221, 245);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.equalToo);
-            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.Zero);
             this.Controls.Add(this.Multiply);
             this.Controls.Add(this.minus);
             this.Controls.Add(this.dott);
             this.Controls.Add(this.num9);
             this.Controls.Add(this.divide);
             this.Controls.Add(this.num6);
-            this.Controls.Add(this.Percentage);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.num8);
@@ -335,11 +335,11 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button num9;
         private System.Windows.Forms.Button dott;
-        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button Zero;
         private System.Windows.Forms.Button num8;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button Percentage;
+        private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button equalToo;
         private System.Windows.Forms.Button Result;
     }
