@@ -14,7 +14,8 @@ namespace Caclulator
     public partial class Form1 : Form
     {
         double CombinedResult = 0;
-        string Operation;
+        string Operation = "";
+        bool isTrue = false;
         public Form1()
         {
             InitializeComponent();
@@ -52,134 +53,121 @@ namespace Caclulator
 
         private void num1_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
-            { 
-                Result.Clear();
-            }
+            if (Result.Text == "0"|| isTrue)
+            {
+            Result.Clear();
+            isTrue = false;
             Result.Text = Result.Text + "1";
+            }
         }
         private void num2_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
-            { 
+            if (Result.Text == "0" || isTrue)
+            {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + "2";
             }
-            Result.Text = Result.Text + "2";
         }
         private void num3_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
-            { 
+            if (Result.Text == "0" || isTrue)
+            {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + "3";
             }
-            Result.Text = Result.Text + "3";
         }
         private void num4_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
-            { 
+            if (Result.Text == "0" || isTrue)
+            {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + "4";
             }
-            Result.Text = Result.Text + "4";
         }
         private void num5_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
-            { 
+            if (Result.Text == "0" || isTrue)
+            {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + "5";
             }
-            Result.Text = Result.Text + "5";
         }
         private void num6_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
-            { 
+            if (Result.Text == "0" || isTrue)
+            {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + "6";
             }
-            Result.Text = Result.Text + "6";
         }
         private void num7_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
-            { 
+            if (Result.Text == "0" || isTrue)
+            {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + "7";
             }
-            Result.Text = Result.Text + "7";
         }
         private void num8_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
-            { 
+            if (Result.Text == "0" || isTrue)
+            {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + "8";
             }
-            Result.Text = Result.Text + "8";
         }
         private void num9_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
-            { 
+            if (Result.Text == "0" || isTrue)
+            {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + "9";
             }
-            Result.Text = Result.Text + "9";
         }
         private void num0_Click(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
+            if (Result.Text == "0" || isTrue)
             {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + "0";
             }
-            Result.Text = Result.Text + "0";
-        }        
-        private void dott_Click(object sender, EventArgs e)
-        {
-            if (Result.Text == "0")
-            {
-                Result.Clear();
-            }
-            Result.Text = Result.Text + ".";
-        }        
-        private void divide_Click(object sender, EventArgs e)
-        {
-            if (Result.Text == "0")
-            {
-                Result.Clear();
-            }
-            Result.Text = Result.Text + "/";
-        }        
-        private void minus_Click(object sender, EventArgs e)
-        {
-            if (Result.Text == "0")
-            {
-                Result.Clear();
-            }
-            Result.Text = Result.Text + "-";
-        }        
-        private void multiply_Click(object sender, EventArgs e)
-        {
-            if (Result.Text == "0")
-            {
-                Result.Clear();
-            }
-            Result.Text = Result.Text + "*";
         }
-        private void Plus_Click(object sender, EventArgs e)
+
+        private void Dott(object sender, EventArgs e)
         {
-            if (Result.Text == "0")
+            if (Result.Text == "0" || isTrue)
             {
                 Result.Clear();
+                isTrue = false;
+                Result.Text = Result.Text + ".";
             }
-            Result.Text = Result.Text + "+";
         }
-        
+
         private void clear_Click(object sender, EventArgs e)
         {
             Result.Text = Result.Text + "0";
             CombinedResult = 0;
         }
+        private void Operations(object sender, EventArgs e)
+        {
+            Button x = (Button)sender;
+            Operation = x.Text;
+            isTrue = true;
+            CombinedResult = Double.Parse(Result.Text);
+        }
 
         private void Equal_Click(object sender, EventArgs e)
         {
-            switch (Plus_Click, multiply_Click, minus_Click, divide_Click)
+            switch (Operation)
             {
                 case "+":
                     Result.Text = (CombinedResult + double.Parse(Result.Text)).ToString();
@@ -196,8 +184,8 @@ namespace Caclulator
                 case "*":
                     Result.Text = (CombinedResult * double.Parse(Result.Text)).ToString();
                     break;
-                
-                    default:break;
+
+                default: break;
             }
         }
     }
