@@ -270,7 +270,7 @@
             this.equalToo.TabIndex = 0;
             this.equalToo.Text = "=";
             this.equalToo.UseVisualStyleBackColor = true;
-            this.equalToo.Click += new System.EventHandler(this.button1_Click);
+            this.equalToo.Click += new System.EventHandler(this.Equal_Click);
             // 
             // Result
             // 

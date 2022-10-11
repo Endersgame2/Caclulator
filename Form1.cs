@@ -176,5 +176,29 @@ namespace Caclulator
             Result.Text = Result.Text + "0";
             CombinedResult = 0;
         }
+
+        private void Equal_Click(object sender, EventArgs e)
+        {
+            switch (Plus_Click, multiply_Click, minus_Click, divide_Click)
+            {
+                case "+":
+                    Result.Text = (CombinedResult + double.Parse(Result.Text)).ToString();
+                    break;
+
+                case "-":
+                    Result.Text = (CombinedResult - double.Parse(Result.Text)).ToString();
+                    break;
+
+                case "/":
+                    Result.Text = (CombinedResult / double.Parse(Result.Text)).ToString();
+                    break;
+
+                case "*":
+                    Result.Text = (CombinedResult * double.Parse(Result.Text)).ToString();
+                    break;
+                
+                    default:break;
+            }
+        }
     }
 }
